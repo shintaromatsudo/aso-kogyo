@@ -1,7 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
-import Header from '../components/Header
-import Footer from '../components/Footer
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -14,7 +14,7 @@ export default class MyApp extends App {
     return { pageProps }
   }
 
-  render () {
+  render() {
     const { Component, pageProps } = this.props
 
     return (

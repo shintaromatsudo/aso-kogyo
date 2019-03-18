@@ -1,23 +1,38 @@
-import Link from 'next/link' 
+import Link from 'next/link'
+import HeaderLink from './HeaderLink'
 
 const Header = () => (
-  <div>
-    <div className='header'>
-    <p>ˆ¢‘hH‹ÆŠ”®‰ïĞ</p>
-    <Link href='/company' ><a>‰ïĞˆÄ“à</a></Link>
-    <Link href='/factory' ><a>Hê</a></Link>
-    <Link href='/product' ><a>»•i</a></Link>
-    <Link href='/technology' ><a>‹Zp</a></Link>
-    <Link href='/equipment' ><a>İ”õ</a></Link>
-    <Link href='/access' ><a>ƒAƒNƒZƒX</a></Link>
-    <Link href='/contact' ><a>‚¨–â‚¢‡‚í‚¹</a></Link>
+  <div className="header">
+    <Link href="/">
+      <a>é˜¿è˜‡å·¥æ¥­æ ªå¼ä¼šç¤¾</a>
+    </Link>
+    <div className="link">
+      <HeaderLink />
     </div>
     <style jsx>{`
+      @media screen and (max-width: 649px) {
+        .link {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 650px) {
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      a :hover {
+        opacity: 0.7;
+      }
       .header {
-        border: 1px solid black;
+        padding: 10px;
+        border: 0.5px solid gray;
+        display: grid;
+        grid-template-columns: 150px 1fr;
       }
     `}</style>
   </div>
-) 
+)
 
 export default Header
