@@ -28,6 +28,9 @@ const HeaderLink = () => (
         padding: 10px;
         color: black;
         text-decoration: none;
+        border-left: 0.5px solid gray;
+        transition-duration:3s;
+         transition-property: border-bottom;
       }
       a :hover {
         color: blue;
