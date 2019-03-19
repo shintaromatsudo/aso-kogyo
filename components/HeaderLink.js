@@ -29,12 +29,10 @@ const HeaderLink = () => (
         color: black;
         text-decoration: none;
         border-left: 0.5px solid gray;
-        transition-duration:3s;
-         transition-property: border-bottom;
+        transition-duration: 0.5s;
       }
       a :hover {
         color: blue;
-        border-bottom: 5px solid blue;
       }
       .headerLink {
         margin: auto 0;
