@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import PageTopButton from '../components/PageTopButton'
 
 const Index = () => {
   // const hover = () => {
@@ -11,21 +12,19 @@ const Index = () => {
   //   const demo = document.getElementById('demo')
   //   demo.classList.remove('demo')
   // }
-  const myFunction = () => {
-    var x = location.pathname
-    document.getElementById('demo').innerHTML = x
-  }
+  // const myFunction = () => {
+  //   var x = location.pathname
+  //   document.getElementById('demo').innerHTML = x
+  // }
   return (
     <div>
       <Head>
         <title>阿蘇工業株式会社</title>
       </Head>
       <div className="demo" id="demo" />
-      <button onClick={myFunction}>Try it</button>
+      {/* <button onClick={myFunction}>Try it</button> */}
+      <PageTopButton />
       <style jsx>{`
-        p {
-          text-align: center;
-        }
         .demo {
           width: 1280px;
           height: 3000px;

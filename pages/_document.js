@@ -23,12 +23,8 @@ class MyDocument extends Document {
     }
   }
 
-  scrollToTop = () => {
-    // window.scrollTo({
-    //   top: 0,
-    //   left: 0,
-    //   behavior: 'smooth'
-    // })
+  onScroll = () => {
+    console.log('scroll')
   }
 
   render() {
@@ -65,26 +61,11 @@ class MyDocument extends Document {
               margin: 0;
               background-color: white;
             }
-            #scrollToTop {
-              font-size: 2em;
-              color: blue;
-              position: fixed;
-              right: 40px;
-              bottom: 30px;
-            }
           `}</style>
         </head>
-        <body>
+        <body onScroll={this.onScroll}>
           <Main />
           <NextScript />
-          <div id="scrollToTop">
-            <a href="#">
-              <i
-                className="fas fa-angle-double-up"
-                onClick={this.scrollToTop}
-              />
-            </a>
-          </div>
         </body>
         <style jsx>{`
           .displayNone {
