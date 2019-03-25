@@ -17,33 +17,33 @@ const HeaderLink = props => (
         color: #a0d8ef;
       }
       a:before {
-	content: '';
-	width: 0;
-	left: 50%;
-	bottom: 0;
-	transition: all 0.3s ease;
-	border-bottom: 3px solid #000;
-	position: absolute;
-	display: block;
-}
-a:hover:before {
-	width: 50%;
-	border-bottom: 3px solid #000;
-}
-a:after {
-	content: '';
-	width: 0;
-	right: 50%;
-	bottom: 0;
-	transition: all 0.3s ease;
-	border-bottom: 3px solid #000;
-	position: absolute;
-	display: block;
-}
-a:hover:after {
-	width: 50%;
-	border-bottom: 3px solid #000;
-}
+        content: '';
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        transition: all 0.3s ease;
+        border-bottom: 3px solid #000;
+        position: absolute;
+        display: block;
+      }
+      a:hover:before {
+        width: 50%;
+        border-bottom: 3px solid #000;
+      }
+      a:after {
+        content: '';
+        width: 0;
+        right: 50%;
+        bottom: 0;
+        transition: all 0.3s ease;
+        border-bottom: 3px solid #000;
+        position: absolute;
+        display: block;
+      }
+      a:hover:after {
+        width: 50%;
+        border-bottom: 3px solid #000;
+      }
     `}</style>
   </div>
 )

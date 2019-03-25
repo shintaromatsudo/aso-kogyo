@@ -2,20 +2,13 @@ import HeaderLink from './HeaderLink'
 
 const HeaderLinks = () => (
   <div className="headerLinks">
-    <HeaderLink href={"/company"} name={"会社案内"} />
-    <HeaderLink href={"/factory"} name={"工場"} />
-    <HeaderLink href={"/product"} name={"技術"} />
-    <HeaderLink href={"/technology"} name={"技術"} />
-    <HeaderLink href={"/equipment"} name={"設備"} />
-    <HeaderLink href={"/access"} name={"アクセス"} />
-    <HeaderLink href={"/contact"} name={"お問い合わせ"} />
-    <div>
-      <ul>
-        <li>横浜工場</li>
-        <li>館林工場</li>
-        <li>飯塚工場/吉北工場</li>
-      </ul>
-    </div>
+    <HeaderLink href={'/company'} name={'会社案内'} />
+    <HeaderLink href={'/factory'} name={'工場'} />
+    <HeaderLink href={'/product'} name={'技術'} />
+    <HeaderLink href={'/technology'} name={'技術'} />
+    <HeaderLink href={'/equipment'} name={'設備'} />
+    <HeaderLink href={'/access'} name={'アクセス'} />
+    <HeaderLink href={'/contact'} name={'お問い合わせ'} />
     <style jsx>{`
       .headerLinks {
         margin: auto 0;

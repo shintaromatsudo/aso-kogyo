@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import HeaderLink from './HeaderLink'
+import HeaderLinks from './HeaderLinks'
 import BurgerMenu from './BurgerMenu'
 
 const Header = () => (
@@ -8,7 +8,7 @@ const Header = () => (
       <a>阿蘇工業株式会社</a>
     </Link>
     <div className="link">
-      <HeaderLink />
+      <HeaderLinks />
     </div>
     <div className="burger">
       <BurgerMenu />
@@ -33,12 +33,14 @@ const Header = () => (
       }
       .header {
         width: 100%;
-        height: 100px;
+        height: 70px;
         padding: 10px;
-        box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.15);
         position: fixed;
         top: 0;
         left: 0;
+        opacity: 0.7;
+        background-color: white;
+        box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.15);
         display: grid;
         grid-template-columns: 150px 1fr;
       }
