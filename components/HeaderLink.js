@@ -32,7 +32,7 @@ const HeaderLink = () => (
         transition-duration: 0.5s;
       }
       a :hover {
-        color: blue;
+        color: #a0d8ef;
       }
       .headerLink {
         margin: auto 0;

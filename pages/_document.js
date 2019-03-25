@@ -6,27 +6,6 @@ class MyDocument extends Document {
     return { ...initialProps }
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
-  }
-
-  handleScroll = () => {
-    const ScrollY = window.scrollY
-    console.log('click')
-    const element = document.getElementById('scrollToTop')
-    if (ScrollY < 50) {
-      element.classList.remove('fadeIn')
-      element.classList.add('displayNone')
-    } else {
-      element.classList.remove('displayNone')
-      element.classList.add('fadeIn')
-    }
-  }
-
-  onScroll = () => {
-    console.log('scroll')
-  }
-
   render() {
     return (
       <html>
@@ -63,31 +42,10 @@ class MyDocument extends Document {
             }
           `}</style>
         </head>
-        <body onScroll={this.onScroll}>
+        <body>
           <Main />
           <NextScript />
         </body>
-        <style jsx>{`
-          .displayNone {
-            display: none;
-          }
-          .fadeIn {
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-            animation-name: fadein;
-          }
-          @keyframes fadein {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        `}</style>
       </html>
     )
   }
