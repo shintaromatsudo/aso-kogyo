@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HeaderLink from './HeaderLink'
+import BurgerMenu from './BurgerMenu'
 
 const Header = () => (
   <div className="header">
@@ -9,6 +10,9 @@ const Header = () => (
     <div className="link">
       <HeaderLink />
     </div>
+    <div className="burger">
+      <BurgerMenu />
+    </div>
     <style jsx>{`
       @media screen and (max-width: 649px) {
         .link {
@@ -16,8 +20,10 @@ const Header = () => (
         }
       }
       @media screen and (min-width: 650px) {
+        .burger {
+          display: none;
+        }
       }
-
       a {
         color: black;
         text-decoration: none;
@@ -26,8 +32,13 @@ const Header = () => (
         opacity: 0.7;
       }
       .header {
+        width: 100%;
+        height: 100px;
         padding: 10px;
-        border: 0.5px solid gray;
+        box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.15);
+        position: fixed;
+        top: 0;
+        left: 0;
         display: grid;
         grid-template-columns: 150px 1fr;
       }

@@ -9,7 +9,7 @@ const Footer = () => (
         text-align: center;
       }
       .footer {
-        border: 0.5px solid gray;
+        background-color: #a0d8ef;
       }
     `}</style>
   </div>

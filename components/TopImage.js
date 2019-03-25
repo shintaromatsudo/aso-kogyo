@@ -1,16 +1,17 @@
 const TopImage = () => (
     <div>
-      <div className="demo" id="demo" />
+      <div className="topImg" id="topImg">
+         <h1>à¢ëhçHã∆äîéÆâÔé–</h1>
+      </div>
       <style jsx>{`
-        .demo {
-          width: 100v;
-          height: 3000px;
-          background-color: #a0d8ef;
-          transition-duration: 1s;
+        h1 {
+          margin: auto;
         }
-        //.demo :hover {
-        //  width: 1330px;
-        //}
+        .topImg {
+          width: 100%;
+          height: 100vh;
+          background-color: #a0d8ef;
+        }
       `}</style>
     </div>
   )

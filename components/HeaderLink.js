@@ -1,27 +1,9 @@
 import Link from 'next/link'
 
-const HeaderLink = () => (
+const HeaderLink = props => (
   <div className="headerLink">
-    <Link href="/company">
-      <a>会社案内</a>
-    </Link>
-    <Link href="/factory">
-      <a>工場</a>
-    </Link>
-    <Link href="/product">
-      <a>製品</a>
-    </Link>
-    <Link href="/technology">
-      <a>技術</a>
-    </Link>
-    <Link href="/equipment">
-      <a>設備</a>
-    </Link>
-    <Link href="/access">
-      <a>アクセス</a>
-    </Link>
-    <Link href="/contact">
-      <a>お問い合わせ</a>
+    <Link href={props.href}>
+      <a>{props.name}</a>
     </Link>
     <style jsx>{`
       a {
@@ -34,13 +16,34 @@ const HeaderLink = () => (
       a :hover {
         color: #a0d8ef;
       }
-      .headerLink {
-        margin: auto 0;
-        text-align: right;
-      }
-      .link {
-        padding: 5px;
-      }
+      a:before {
+	content: '';
+	width: 0;
+	left: 50%;
+	bottom: 0;
+	transition: all 0.3s ease;
+	border-bottom: 3px solid #000;
+	position: absolute;
+	display: block;
+}
+a:hover:before {
+	width: 50%;
+	border-bottom: 3px solid #000;
+}
+a:after {
+	content: '';
+	width: 0;
+	right: 50%;
+	bottom: 0;
+	transition: all 0.3s ease;
+	border-bottom: 3px solid #000;
+	position: absolute;
+	display: block;
+}
+a:hover:after {
+	width: 50%;
+	border-bottom: 3px solid #000;
+}
     `}</style>
   </div>
 )

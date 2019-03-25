@@ -81,6 +81,7 @@ class PageTopButton extends React.Component {
           font-size: 2em;
           color: #a0d8ef;
           background-color: white;
+          border-radius: 50%;
           text-align: center;
           cursor: pointer;
         }
@@ -96,20 +97,24 @@ class PageTopButton extends React.Component {
           0% {
             color: #a0d8ef;
             background-color: white;
+            border: 0.5px solid #a0d8ef;
           }
           100% {
             color: white;
             background-color: #a0d8ef;
+            border: 0.5px solid white;
           }
         }
         @keyframes leave {
           0% {
             color: white;
             background-color: #a0d8ef;
+            border: 0.5px solid white;
           }
           100% {
             color: #a0d8ef;
             background-color: white;
+            border: 0.5px solid #a0d8ef;
           }
         }
         //.displayNone {
