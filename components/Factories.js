@@ -17,6 +17,7 @@ const Factories = () => (
       <a href="mailto:yokohama@aso-kk.co.jp">メール</a>
     </p>
     <p>yokohama&#64;aso-kk.co.jp</p>
+    <p>AIzaSyCM2xQU41SM5J_e4UlvIhVEMZN5CTty020</p>
     <Factory
       name={'館林工場'}
       zipcode={'〒374-0074'}

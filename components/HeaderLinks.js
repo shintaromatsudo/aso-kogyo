@@ -13,6 +13,7 @@ const HeaderLinks = () => (
       .headerLinks {
         margin: auto 0;
         text-align: right;
+        display: flex;
       }
     `}</style>
   </div>

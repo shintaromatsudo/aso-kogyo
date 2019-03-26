@@ -57,9 +57,15 @@ class BurgerMenu extends React.Component {
             お問い合わせ
           </a>
         </Menu>
-        <div>
+        <div className="three">
           <i className="fas fa-bars" onClick={() => this.toggleMenu()} />
         </div>
+        <style jsx>{`
+          .three {
+            position: fixed;
+            right: 0;
+          }
+        `}<style>
       </div>
     )
   }

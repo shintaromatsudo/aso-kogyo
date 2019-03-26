@@ -10,33 +10,45 @@ class PageTopButton extends React.Component {
   }
 
   handleScroll() {
-    const ScrollY = Math.max(
+    console.log(window.pageYoffset)
+    console.log(document.documentElement.scrollTop)
+    console.log(document.body.scrollTop)
+    if (window.pageYoffset != NaN){
+      const ScrollY = window.pageYoffset
+    } else if (document.documentElement.scrollTop != NaN){
+      const ScrollY = document.documentElement.scrollTop
+    }} else if (document.body.scrollTop != NaN){
+      const ScrollY = document.body.scrollTop
+    }
+    // const ScrollY = Math.max(
       // window.pageYoffset,
-      document.documentElement.scrollTop
-      //   document.body.scrollTop
-    )
+      // document.documentElement.scrollTop
+      // document.body.scrollTop
+    // )
     console.log(ScrollY)
     const element = document.getElementById('scrollToTop')
     if (ScrollY < 50) {
-      element.classList.remove('fadeIn')
-      element.classList.add('fadeOut')
+      element.classList.remove('fade')
+      // element.classList.remove('fadeIn')
+      // element.classList.add('fadeOut')
     } else {
-      element.classList.add('fadeIn')
-      element.classList.remove('fadeOut')
+      element.classList.add('fade')
+      // element.classList.add('fadeIn')
+      // element.classList.remove('fadeOut')
     }
   }
 
-  hover() {
-    const scrollToTop = document.getElementById('scrollToTop')
-    scrollToTop.classList.add('hover')
-    scrollToTop.classList.remove('leave')
-  }
+  // hover() {
+  //   const scrollToTop = document.getElementById('scrollToTop')
+  //   scrollToTop.classList.add('hover')
+  //   scrollToTop.classList.remove('leave')
+  // }
 
-  leave() {
-    const scrollToTop = document.getElementById('scrollToTop')
-    scrollToTop.classList.add('leave')
-    scrollToTop.classList.remove('hover')
-  }
+  // leave() {
+  //   const scrollToTop = document.getElementById('scrollToTop')
+  //   scrollToTop.classList.add('leave')
+  //   scrollToTop.classList.remove('hover')
+  // }
 
   scrollToTop() {
     window.scrollTo({
@@ -51,8 +63,8 @@ class PageTopButton extends React.Component {
       <div
         id="scrollToTop"
         onClick={this.scrollToTop}
-        onMouseEnter={this.hover}
-        onMouseLeave={this.leave}
+        // onMouseEnter={this.hover}
+        // onMouseLeave={this.leave}
       >
         <i className="fas fa-angle-double-up" />
         <style jsx>{`
@@ -69,63 +81,74 @@ class PageTopButton extends React.Component {
             border-radius: 50%;
             text-align: center;
             cursor: pointer;
+            transition: all 0.3s;
             opacity: 0;
+            visibility: hidden;
           }
-          .hover {
-            animation: hover 0.3s linear 0s;
-            animation-fill-mode: forwards;
+          #scrollToTop :hover {
+            color: white;
+            background-color: #a0d8ef;
+            border: 2px solid white;
           }
-          .leave {
-            animation: leave 0.3s linear 0s;
-            animation-fill-mode: forwards;
+          // .hover {
+          //   animation: hover 0.3s linear 0s;
+          //   animation-fill-mode: forwards;
+          // }
+          // .leave {
+          //   animation: leave 0.3s linear 0s;
+          //   animation-fill-mode: forwards;
+          // }
+          // @keyframes hover {
+          //   0% {
+          //     color: #a0d8ef;
+          //     background-color: white;
+          //     border: 2px solid #a0d8ef;
+          //   }
+          //   100% {
+          //     color: white;
+          //     background-color: #a0d8ef;
+          //     border: 2px solid white;
+          //   }
+          // }
+          // @keyframes leave {
+          //   0% {
+          //     color: white;
+          //     background-color: #a0d8ef;
+          //     border: 2px solid white;
+          //   }
+          //   100% {
+          //     color: #a0d8ef;
+          //     background-color: white;
+          //     border: 2px solid #a0d8ef;
+          //   }
+          // }
+          .fade {
+            opacity: 1;
+            visibility: visible;
           }
-          @keyframes hover {
-            0% {
-              color: #a0d8ef;
-              background-color: white;
-              border: 2px solid #a0d8ef;
-            }
-            100% {
-              color: white;
-              background-color: #a0d8ef;
-              border: 2px solid white;
-            }
-          }
-          @keyframes leave {
-            0% {
-              color: white;
-              background-color: #a0d8ef;
-              border: 2px solid white;
-            }
-            100% {
-              color: #a0d8ef;
-              background-color: white;
-              border: 2px solid #a0d8ef;
-            }
-          }
-          .fadeIn {
-            animation: fadein 0.5s linear 0s;
-            animation-fill-mode: forwards;
-          }
-          .fadeout {
-            animation: fadeout 0.5s linear 0s;
-            animation-fill-mode: forwards;
-          }
-          @keyframes fadein {
-            0% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
-          @keyframes fadeout {
-            from {
-              opacity: 1;
-            }
-            to {
-              opacity: 0;
-            }
+          // .fadeIn {
+          //   animation: fadein 0.5s linear 0s;
+          //   animation-fill-mode: forwards;
+          // }
+          // .fadeout {
+          //   animation: fadeout 0.5s linear 0s;
+          //   animation-fill-mode: forwards;
+          // }
+          // @keyframes fadein {
+          //   0% {
+          //     opacity: 0;
+          //   }
+          //   100% {
+          //     opacity: 1;
+          //   }
+          // }
+          // @keyframes fadeout {
+          //   from {
+          //     opacity: 1;
+          //   }
+          //   to {
+          //     opacity: 0;
+          //   }
           }
         `}</style>
       </div>
