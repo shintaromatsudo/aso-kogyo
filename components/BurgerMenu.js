@@ -65,7 +65,7 @@ class BurgerMenu extends React.Component {
             position: fixed;
             right: 0;
           }
-        `}<style>
+        `}</style>
       </div>
     )
   }
