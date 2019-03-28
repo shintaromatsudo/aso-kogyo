@@ -25,14 +25,12 @@ class Index extends React.Component {
     } else if (document.body.scrollTop != NaN) {
       const ScrollY = document.body.scrollTop
     }
+    const ScrollY = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
     console.log(ScrollY)
     const scrollAnimationElm = document.querySelectorAll('.scrollIn')
     for (var i = 0; i < scrollAnimationElm.length; i++) {
       var triggerMargin = 300
-      if (
-        ScrollY >
-        scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin
-      ) {
+      if (ScrollY > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
         scrollAnimationElm[i].classList.add('show')
       }
     }

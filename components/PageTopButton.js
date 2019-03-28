@@ -13,13 +13,7 @@ class PageTopButton extends React.Component {
     console.log(window.pageYoffset)
     console.log(document.documentElement.scrollTop)
     console.log(document.body.scrollTop)
-    if (window.pageYoffset != NaN) {
-      ScrollY = window.pageYoffset
-    } else if (document.documentElement.scrollTop != NaN) {
-      ScrollY = document.documentElement.scrollTop
-    } else if (document.body.scrollTop != NaN) {
-      ScrollY = document.body.scrollTop
-    }
+    const ScrollY = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
     console.log(ScrollY)
     const element = document.getElementById('scrollToTop')
     if (ScrollY < 50) {
