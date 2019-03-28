@@ -1,13 +1,15 @@
 import TopSecond from './TopSecond'
 
 const TopSeconds = () => (
-  <div>
+  <div className="topSeconds">
     <p>紹介</p>
     <TopSecond />
     <TopSecond />
     <TopSecond />
     <style jsx>{`
-      background-color: white;
+      .topSeconds {
+        display: flex;
+      }
     `}</style>
   </div>
 )

@@ -11,26 +11,21 @@ class Index extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', false)
+    window.removeEventListener('scroll', event => this.handleScroll(), false)
   }
 
   handleScroll() {
-    console.log(window.pageYoffset)
-    console.log(document.documentElement.scrollTop)
-    console.log(document.body.scrollTop)
-    if (window.pageYoffset != NaN) {
-      const ScrollY = window.pageYoffset
-    } else if (document.documentElement.scrollTop != NaN) {
-      const ScrollY = document.documentElement.scrollTop
-    } else if (document.body.scrollTop != NaN) {
-      const ScrollY = document.body.scrollTop
-    }
-    const ScrollY = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
-    console.log(ScrollY)
+    const ScrollY = Math.max(
+      document.documentElement.scrollTop,
+      document.body.scrollTop
+    )
     const scrollAnimationElm = document.querySelectorAll('.scrollIn')
     for (var i = 0; i < scrollAnimationElm.length; i++) {
-      var triggerMargin = 300
-      if (ScrollY > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+      var triggerMargin = 200
+      if (
+        ScrollY >
+        scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin
+      ) {
         scrollAnimationElm[i].classList.add('show')
       }
     }

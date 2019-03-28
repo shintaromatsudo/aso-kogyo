@@ -4,7 +4,7 @@ const Factory = props => (
     <p>{props.zipcode}</p>
     <p>{props.address}</p>
     <p>
-      <iframe src={props.src} allowfullscreen />
+      <iframe src={props.src} allowFullScreen />
     </p>
     <style jsx>{`
       p {

@@ -10,10 +10,10 @@ const Factories = () => (
         'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13004.418365680072!2d139.522319!3d35.427439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd19698d5778b90d2!2z6Zi_6JiH5bel5qWt77yI5qCq77yJ!5e0!3m2!1sja!2sjp!4v1553521492748'
       }
     />
-    <p class="btn">
+    <p className="btn">
       <a href="tel:045-811-1244">電話</a>
     </p>
-    <p class="btn">
+    <p className="btn">
       <a href="mailto:yokohama@aso-kk.co.jp">メール</a>
     </p>
     <p>yokohama&#64;aso-kk.co.jp</p>

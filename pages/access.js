@@ -8,7 +8,7 @@ const Access = () => (
     <Factories />
     <style jsx>{`
       .access {
-        animation:fadeIn 2s;
+        animation:fadeIn 3s;
       }
       @keyframes fadeIn {
         0% { 
