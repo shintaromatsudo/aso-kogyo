@@ -2,10 +2,22 @@ import Title from '../components/Title'
 import Factories from '../components/Factories'
 
 const Access = () => (
-  <div>
+  <div className="access">
     <Title title={'アクセス'} />
     <p>アクセス</p>
     <Factories />
+    <style jsx>{`
+      .access {
+        animation:fadeIn 2s;
+      }
+      @keyframes fadeIn {
+        0% { 
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+    `}</style>
   </div>
 )
 
