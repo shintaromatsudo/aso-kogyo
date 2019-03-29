@@ -17,6 +17,7 @@ const Access = () => (
         100% {
           opacity: 1;
         }
+      }
     `}</style>
   </div>
 )
