@@ -24,18 +24,6 @@ class PageTopButton extends React.Component {
     }
   }
 
-  hover() {
-    const scrollToTop = document.getElementById('scrollToTop')
-    scrollToTop.classList.add('hover')
-    scrollToTop.classList.remove('leave')
-  }
-
-  leave() {
-    const scrollToTop = document.getElementById('scrollToTop')
-    scrollToTop.classList.add('leave')
-    scrollToTop.classList.remove('hover')
-  }
-
   scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -46,12 +34,7 @@ class PageTopButton extends React.Component {
 
   render() {
     return (
-      <div
-        id="scrollToTop"
-        onClick={this.scrollToTop}
-        onMouseEnter={this.hover}
-        onMouseLeave={this.leave}
-      >
+      <div id="scrollToTop" onClick={this.scrollToTop}>
         <i className="fas fa-angle-double-up" />
         <style jsx>{`
           #scrollToTop {
@@ -67,41 +50,14 @@ class PageTopButton extends React.Component {
             border-radius: 50%;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.5s linear 0s;
             opacity: 0;
             visibility: hidden;
           }
-          .hover {
-            animation: hover 0.3s linear 0s;
-            animation-fill-mode: forwards;
-          }
-          .leave {
-            animation: leave 0.3s linear 0s;
-            animation-fill-mode: forwards;
-          }
-          @keyframes hover {
-            0% {
-              color: #a0d8ef;
-              background-color: white;
-              border: 2px solid #a0d8ef;
-            }
-            100% {
-              color: white;
-              background-color: #a0d8ef;
-              border: 2px solid white;
-            }
-          }
-          @keyframes leave {
-            0% {
-              color: white;
-              background-color: #a0d8ef;
-              border: 2px solid white;
-            }
-            100% {
-              color: #a0d8ef;
-              background-color: white;
-              border: 2px solid #a0d8ef;
-            }
+          #scrollToTop :hover {
+            color: white;
+            background-color: #a0d8ef;
+            border: 2px solid white;
           }
           .fadeIn {
             animation: fadein 0.5s linear 0s;
