@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "name": "aso-kk",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "alias": "aso-kk.now.sh"
+}
