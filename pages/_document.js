@@ -36,7 +36,7 @@ class MyDocument extends Document {
           />
           <style>{`
             body {
-              font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳＰゴシック', 'MS PGothic', sans-serif;
+              font-family: 游ゴシック体, Yu Gothic, YuGothic, ヒラギノ角ゴシック Pro, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳＰゴシック, MS PGothic, sans-serif;
               margin: 0;
               background-color: white;
               animation:fadeIn 3s;
