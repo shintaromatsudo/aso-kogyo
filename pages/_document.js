@@ -41,14 +41,14 @@ class MyDocument extends Document {
               background-color: white;
               animation:fadeIn 3s;
             }
-      @keyframes fadeIn {
-        0% { 
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
+            @keyframes fadeIn {
+              0% { 
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
+            }
           `}</style>
         </head>
         <body>

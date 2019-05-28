@@ -1,51 +1,57 @@
+import React from 'react'
 import Link from 'next/link'
 
 const HeaderLink = props => (
-  <div className="headerLink">
+  <React.Fragment>
     <Link href={props.href}>
-      <a>{props.name}</a>
+      <div className="headerLink">
+        <a>{props.name}</a>
+      </div>
     </Link>
     <style jsx>{`
       a {
-        padding: 10px;
         color: black;
         text-decoration: none;
+      }
+      .headerLink {
+        padding: 10px;
         border-left: 0.5px solid gray;
+        cursor: pointer;
         transition-duration: 0.5s;
       }
-      a :hover {
+      .headerLink :hover {
         color: #a0d8ef;
       }
-      a:before {
-        content: '';
-        width: 0;
-        left: 50%;
-        bottom: 0;
-        transition: all 0.3s ease;
-        border-bottom: 3px solid #000;
-        position: absolute;
-        display: block;
-      }
-      a:hover:before {
-        width: 50%;
-        border-bottom: 3px solid #000;
-      }
-      a:after {
-        content: '';
-        width: 0;
-        right: 50%;
-        bottom: 0;
-        transition: all 0.3s ease;
-        border-bottom: 3px solid #000;
-        position: absolute;
-        display: block;
-      }
-      a:hover:after {
-        width: 50%;
-        border-bottom: 3px solid #000;
-      }
+      // .headerLink ::before {
+      //   content: '';
+      //   width: 0;
+      //   left: 50%;
+      //   bottom: 0;
+      //   transition: all 0.3s ease;
+      //   border-bottom: 3px solid #000;
+      //   position: absolute;
+      //   display: block;
+      // }
+      // .headerLink:hover ::before {
+      //   width: 50%;
+      //   border-bottom: 3px solid #000;
+      // }
+      // .headerLink ::after {
+      //   content: '';
+      //   width: 0;
+      //   right: 50%;
+      //   bottom: 0;
+      //   transition: all 0.3s ease;
+      //   border-bottom: 3px solid #000;
+      //   position: absolute;
+      //   display: block;
+      // }
+      // .headerLink:hover ::after {
+      //   width: 50%;
+      //   border-bottom: 3px solid #000;
+      // }
     `}</style>
-  </div>
+  </React.Fragment>
 )
 
 export default HeaderLink

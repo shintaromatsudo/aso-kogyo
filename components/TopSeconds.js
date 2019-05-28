@@ -9,6 +9,7 @@ const TopSeconds = () => (
     <style jsx>{`
       .topSeconds {
         display: flex;
+        background-color: #009b9f;
       }
     `}</style>
   </div>

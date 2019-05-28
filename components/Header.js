@@ -4,9 +4,11 @@ import BurgerMenu from './BurgerMenu'
 
 const Header = () => (
   <div className="header">
-    <Link href="/">
-      <a>阿蘇工業株式会社</a>
-    </Link>
+    <div className="top">
+      <Link href="/">
+        <a>阿蘇工業株式会社</a>
+      </Link>
+    </div>
     <div className="link">
       <HeaderLinks />
     </div>
@@ -24,25 +26,35 @@ const Header = () => (
           display: none;
         }
       }
-      a {
+      .top a {
         color: black;
         text-decoration: none;
       }
-      a :hover {
+      .top :hover {
         opacity: 0.7;
       }
       .header {
         width: 100%;
         height: 70px;
-        padding: 10px;
+        // padding: 10px;
         position: fixed;
         top: 0;
         left: 0;
         opacity: 0.7;
         background-color: white;
         box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.15);
-        display: grid;
-        grid-template-columns: 150px 1fr;
+        display: flex;
+      }
+      .top {
+        margin: auto 0;
+      }
+      .link {
+        margin: auto 0;
+        margin-left: auto;
+      }
+      .burger {
+        margin-top: auto;
+        margin-left: auto;
       }
     `}</style>
   </div>

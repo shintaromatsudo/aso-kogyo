@@ -5,6 +5,8 @@ const TopImage = () => (
     </div>
     <style jsx>{`
       h1 {
+        text-align: center;
+        vertical-align: middle;
         margin: auto;
       }
       .topImg {
