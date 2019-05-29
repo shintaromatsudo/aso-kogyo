@@ -1,8 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import TopImage from '../components/TopImage'
-import ScrollInLeft from '../components/ScrollInLeft2'
-import ScrollInRight from '../components/ScrollInRight2'
 import ScrollInLefts from '../components/ScrollInLefts'
 import ScrollInRights from '../components/ScrollInRights'
 import PageTopButton from '../components/PageTopButton'
@@ -14,13 +12,25 @@ const Index = () => (
     </Head>
     <TopImage />
     <TopImage />
-    <ScrollInLeft />
-    <ScrollInRight />
-    <ScrollInLefts />
-    <ScrollInRights />
+    <div className="a">
+      <ScrollInLefts />
+    </div>
+    <div className="b">
+      <ScrollInRights />
+    </div>
+
     <PageTopButton />
     <TopImage />
-    <style jsx>{
+    <style jsx>{`
+      .a {
+        position: relative;
+        height: 500px;
+        background-color: gray;
+      }
+      .b {
+        position: relative;
+        height: 500px;
+      }
     `}</style>
   </div>
 )

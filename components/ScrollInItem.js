@@ -1,9 +1,8 @@
 import React from 'react'
 
 const Item = () => (
-    <div className="frame">
-      <div className="content" />
-    </div>
+  <div className="frame">
+    <div className="content" />
     <style jsx>{`
       .frame {
         position: relative;
@@ -29,7 +28,7 @@ const Item = () => (
         transform: scale(1.1);
       }
     `}</style>
-    </div>
+  </div>
 )
 
 export default Item

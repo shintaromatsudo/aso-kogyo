@@ -44,6 +44,7 @@ const Header = () => (
         background-color: white;
         box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.15);
         display: flex;
+        z-index: 9999;
       }
       .top {
         margin: auto 0;

@@ -42,16 +42,20 @@ class ScrollInLefts extends React.Component {
         <style jsx>{`
           .flex {
             display: flex;
-            position: relative;
-            right: 500px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
             width: 100%;
             height: 300px;
-            margin: 10px;
-            padding: 10px;
-            background-color: black;
+            background-color: gray;
             justify-content: space-around;
           }
           .scrollIn {
+            position: relative;
+            left: -500px;
             opacity: 0;
             transition: all 1s ease;
           }
