@@ -10,13 +10,13 @@ const BurgerMenu = () => {
   return (
     <div>
       <div id="sidebar" className="sidebar">
-        <a
-          href="javascript:void(0)"
-          class="closebtn"
+        <p
+          // href="javascript:void(0)"
+          className="closebtn"
           onClick={() => closeMenu()}
         >
           ×
-        </a>
+        </p>
         <a id="company" className="menu-item" href="/company">
           会社案内
         </a>
@@ -65,6 +65,16 @@ const BurgerMenu = () => {
         }
         .sidebar a:hover {
           color: #f1f1f1;
+        }
+        .closebtn {
+          padding: 4px 8px 4px 32px;
+          margin: 0;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+          cursor: pointer;
         }
         .three {
           position: absolute;

@@ -24,7 +24,7 @@ const Header = () => (
       }
       @media screen and (min-width: 650px) {
         .burger {
-          display: none;
+          // display: none;
         }
       }
       .top a {
