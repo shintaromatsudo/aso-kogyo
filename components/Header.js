@@ -19,6 +19,7 @@ const Header = () => (
       @media screen and (max-width: 649px) {
         .link {
           display: none;
+          visibility: hidden;
         }
       }
       @media screen and (min-width: 650px) {
@@ -34,7 +35,7 @@ const Header = () => (
         opacity: 0.7;
       }
       .header {
-        width: 100%;
+        width: 100vw;
         height: 70px;
         // padding: 10px;
         position: fixed;
@@ -54,8 +55,8 @@ const Header = () => (
         margin-left: auto;
       }
       .burger {
-        margin-top: auto;
-        margin-left: auto;
+        // margin-top: auto;
+        // margin-left: auto;
       }
     `}</style>
   </div>

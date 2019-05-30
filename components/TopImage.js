@@ -10,6 +10,7 @@ const TopImage = () => (
         margin: auto;
       }
       .topImg {
+        width: 100vw;
         height: 100vh;
         background-color: #a0d8ef;
       }
