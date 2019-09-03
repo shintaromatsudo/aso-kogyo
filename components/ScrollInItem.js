@@ -1,16 +1,37 @@
 import React from 'react'
 
-const Item = () => (
+const Item = props => (
   <div className="frame">
-    <div className="content" />
+    <div className="content">
+      <img className="content" src={props.src} />
+    </div>
     <style jsx>{`
+      @media screen and (max-width: 649px) {
+        .frame {
+          margin: 20px auto;
+          width: 300px;
+          height: 200px;
+        }
+        .content {
+          width: 300px;
+          height: 200px;
+        }
+      }
+      @media screen and (min-width: 650px) {
+        .frame {
+          margin: 0 10px;
+          width: 350px;
+          height: 250px;
+        }
+        .content {
+          width: 350px;
+          height: 250px;
+        }
+      }
       .frame {
         position: relative;
-        width: 300px;
-        height: 300px;
-        // overflow: hidden;
+        overflow: hidden;
         background-color: gray;
-        margin: 0 10px;
       }
       .content {
         position: absolute;
@@ -19,8 +40,6 @@ const Item = () => (
         bottom: 0;
         left: 0;
         margin: auto;
-        width: 300px;
-        height: 300px;
         background-color: #a0d8ef;
         transition-duration: 1s;
       }

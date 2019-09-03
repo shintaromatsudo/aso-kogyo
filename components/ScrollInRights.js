@@ -30,22 +30,25 @@ class ScrollInLefts extends React.Component {
   render() {
     return (
       <div className="scrollInRights flex">
-        <div className="scrollIn delay2">
-          <Item />
+        <div className="scrollIn">
+          <Item src="../static/img/工場.jpg" />
         </div>
         <div className="scrollIn delay1">
-          <Item />
+          <Item src="../static/img/ダッシュボード.jpg" />
         </div>
-        <div className="scrollIn">
-          <Item />
+        <div className="scrollIn delay2">
+          <Item src="../static/img/スパナ.jpg" />
         </div>
         <style jsx>{`
           @media screen and (max-width: 649px) {
-            .flex {
-              margin: 10px auto;
+            .scrollInRights {
+              height: 640px;
             }
           }
           @media screen and (min-width: 650px) {
+            .scrollInRights {
+              height: 300px;
+            }
             .flex {
               display: flex;
               justify-content: space-around;
@@ -58,10 +61,10 @@ class ScrollInLefts extends React.Component {
             bottom: 0;
             left: 0;
             margin: auto;
-            width: 100%;
-            height: 300px;
-            background-color: gray;
+            width: 100vw;
+            background-color: #a0d8ef;
           }
+
           .scrollIn {
             position: relative;
             right: -500px;

@@ -19,12 +19,11 @@ const Header = () => (
       @media screen and (max-width: 649px) {
         .link {
           display: none;
-          visibility: hidden;
         }
       }
       @media screen and (min-width: 650px) {
         .burger {
-          // display: none;
+          display: none;
         }
       }
       .top a {
@@ -37,7 +36,6 @@ const Header = () => (
       .header {
         width: 100vw;
         height: 70px;
-        // padding: 10px;
         position: fixed;
         top: 0;
         left: 0;
@@ -48,15 +46,14 @@ const Header = () => (
         z-index: 9999;
       }
       .top {
-        margin: auto 0;
+        margin: auto 20px;
       }
       .link {
-        margin: auto 0;
+        margin: auto 15px;
         margin-left: auto;
       }
       .burger {
-        // margin-top: auto;
-        // margin-left: auto;
+        height: 70px;
       }
     `}</style>
   </div>

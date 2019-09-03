@@ -78,7 +78,7 @@ const BurgerMenu = () => {
         }
         .three {
           position: absolute;
-          right: 50px;
+          right: 30px;
           font-size: 20px;
           margin: auto;
           cursor: pointer;

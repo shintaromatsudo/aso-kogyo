@@ -1,18 +1,36 @@
 const TopImage = () => (
-  <div>
-    <div className="topImg" id="topImg">
-      <h1>阿蘇工業株式会社</h1>
-    </div>
+  <div className="topImg">
+    {/* <div id="topImg" /> */}
+    <h1 id="h1">阿蘇工業株式会社</h1>
+    <img src="../static/img/yuuhi.jpg" type="hidden" />
     <style jsx>{`
-      h1 {
-        text-align: center;
-        vertical-align: middle;
-        margin: auto;
-      }
       .topImg {
-        width: 100vw;
         height: 100vh;
-        background-color: #a0d8ef;
+      }
+      h1 {
+        width: 80%;
+        height: 20vh;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 10vw;
+        font-weight: bold;
+        text-align: center;
+      }
+      #topImg {
+        position: absolute;
+        width: 100%;
+        background-image: url('../static/img/yuuhi.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 100;
+      }
+      img {
+        width: 100%;
+        height: 100vh;
       }
     `}</style>
   </div>

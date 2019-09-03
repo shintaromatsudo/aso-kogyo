@@ -31,21 +31,24 @@ class ScrollInLefts extends React.Component {
     return (
       <div className="scrollInLefts flex">
         <div className="scrollIn delay2">
-          <Item />
+          <Item src="../static/img/工場.jpg" />
         </div>
         <div className="scrollIn delay1">
-          <Item />
+          <Item src="../static/img/ダッシュボード.jpg" />
         </div>
         <div className="scrollIn">
-          <Item />
+          <Item src="../static/img/スパナ.jpg" />
         </div>
         <style jsx>{`
           @media screen and (max-width: 649px) {
-            .flex {
-              margin: 10px auto;
+            .scrollInLefts {
+              height: 640px;
             }
           }
           @media screen and (min-width: 650px) {
+            .scrollInLefts {
+              height: 300px;
+            }
             .flex {
               display: flex;
               justify-content: space-around;
@@ -58,8 +61,7 @@ class ScrollInLefts extends React.Component {
             bottom: 0;
             left: 0;
             margin: auto;
-            width: 100%;
-            height: 300px;
+            width: 100vw;
             background-color: gray;
           }
 
