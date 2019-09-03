@@ -3,7 +3,7 @@ import HeaderLinkOpen from './HeaderLinkOpen'
 
 const HeaderLinks = () => (
   <div className="headerLinks">
-    <HeaderLink href={'/company'} name={'会社案内'} />
+    <HeaderLink href={'/company'} name={'会社概要'} />
     <HeaderLinkOpen id={'open'} href={'/yokohama'} link_name={'横  浜'}>
       <HeaderLink href={'/factory'} name={'工   場'} />
     </HeaderLinkOpen>

@@ -3,7 +3,7 @@ import Link from './Link'
 const Footer = () => (
   <div className="footer">
     <div className="flex">
-      <Link href={'/company'} name={'会社案内'} />
+      <Link href={'/company'} name={'会社概要'} />
       <Link href={'/factory'} name={'工   場'} />
       <Link href={'/product'} name={'製   品'} />
       <Link href={'/technology'} name={'技   術'} />

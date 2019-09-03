@@ -18,7 +18,7 @@ const BurgerMenu = () => {
           ×
         </p>
         <a id="company" className="menu-item" href="/company">
-          会社案内
+          会社概要
         </a>
         <a id="factory" className="menu-item" href="/factory">
           工場

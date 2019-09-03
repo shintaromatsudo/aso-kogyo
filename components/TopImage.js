@@ -1,8 +1,8 @@
 const TopImage = () => (
   <div className="topImg">
     {/* <div id="topImg" /> */}
-    <h1 id="h1">阿蘇工業株式会社</h1>
-    <img src="../static/img/yuuhi.jpg" type="hidden" />
+    {/* <h1 id="h1">阿蘇工業株式会社</h1> */}
+    <img src="../static/img/TopImg.JPG" type="hidden" />
     <style jsx>{`
       .topImg {
         height: 100vh;

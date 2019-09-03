@@ -1,8 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import TopImage from '../components/TopImage'
-import ScrollInLefts from '../components/ScrollInLefts'
-import ScrollInRights from '../components/ScrollInRights'
+import Yokohama from '../components/Yokohama'
+import Fukuoka from '../components/Fukuoka'
+import Tatebayashi from '../components/Tatebayashi'
 
 const Index = () => (
   <div id="main">
@@ -12,15 +13,15 @@ const Index = () => (
     <TopImage />
     <div className="a">
       <h2>横浜工場</h2>
-      <ScrollInLefts />
+      <Yokohama />
     </div>
     <div className="b">
       <h2>館林工場</h2>
-      <ScrollInRights />
+      <Tatebayashi />
     </div>
     <div className="a">
       <h2>福岡工場</h2>
-      <ScrollInLefts />
+      <Fukuoka />
     </div>
     <div className="access">
       <h2>アクセス</h2>

@@ -31,13 +31,13 @@ class ScrollInLefts extends React.Component {
     return (
       <div className="scrollInLefts flex">
         <div className="scrollIn delay2">
-          <Item src="../static/img/工場.jpg" />
+          <Item src={this.props.img1} />
         </div>
         <div className="scrollIn delay1">
-          <Item src="../static/img/ダッシュボード.jpg" />
+          <Item src={this.props.img2} />
         </div>
         <div className="scrollIn">
-          <Item src="../static/img/スパナ.jpg" />
+          <Item src={this.props.img3} />
         </div>
         <style jsx>{`
           @media screen and (max-width: 649px) {
