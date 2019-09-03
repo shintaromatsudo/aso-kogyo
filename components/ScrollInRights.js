@@ -36,7 +36,7 @@ class ScrollInLefts extends React.Component {
         <div className="scrollIn delay1">
           <Item src="../static/img/ダッシュボード.jpg" />
         </div>
-        <div className="scrollIn delay2">
+        <div className="scrollIn d-none delay2">
           <Item src="../static/img/スパナ.jpg" />
         </div>
         <style jsx>{`
@@ -63,6 +63,7 @@ class ScrollInLefts extends React.Component {
             margin: auto;
             width: 100vw;
             background-color: #a0d8ef;
+            overflow: hidden;
           }
 
           .scrollIn {

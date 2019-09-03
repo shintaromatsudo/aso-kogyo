@@ -3,7 +3,6 @@ import Head from 'next/head'
 import TopImage from '../components/TopImage'
 import ScrollInLefts from '../components/ScrollInLefts'
 import ScrollInRights from '../components/ScrollInRights'
-import PageTopButton from '../components/PageTopButton'
 
 const Index = () => (
   <div id="main">
@@ -36,8 +35,6 @@ const Index = () => (
         />
       </div>
     </div>
-
-    <PageTopButton />
     <style jsx>{`
       @media screen and (max-width: 649px) {
         .a {

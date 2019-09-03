@@ -2,6 +2,7 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PageTopButton from '../components/PageTopButton'
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -21,6 +22,7 @@ export default class MyApp extends App {
         <Header />
         <Component {...pageProps} />
         <Footer />
+        <PageTopButton />
       </Container>
     )
   }
