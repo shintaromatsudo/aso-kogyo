@@ -2,9 +2,11 @@ import React from 'react'
 
 const Item = props => (
   <div className="frame">
-    <div className="content">
-      <img className="content" src={props.src} />
-    </div>
+    <a href={props.href}>
+      <div className="content">
+        <img className="content" src={props.src} />
+      </div>
+    </a>
     <style jsx>{`
       @media screen and (max-width: 649px) {
         .frame {
@@ -20,12 +22,12 @@ const Item = props => (
       @media screen and (min-width: 650px) {
         .frame {
           margin: 0 10px;
-          width: 350px;
-          height: 250px;
+          width: 450px;
+          height: 350px;
         }
         .content {
-          width: 350px;
-          height: 250px;
+          width: 450px;
+          height: 350px;
         }
       }
       .frame {
@@ -40,7 +42,7 @@ const Item = props => (
         bottom: 0;
         left: 0;
         margin: auto;
-        background-color: #a0d8ef;
+        background-color: #1059d3;
         transition-duration: 1s;
       }
       .content :hover {

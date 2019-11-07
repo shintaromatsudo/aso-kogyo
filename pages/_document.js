@@ -26,7 +26,11 @@ class MyDocument extends Document {
           <link
             rel="shortcut icon"
             type="image/x-icon"
-            href="../static/img/favicon.ico"
+            href="../static/favicon.ico"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Lato:300|Noto+Sans+JP:300"
+            rel="stylesheet"
           />
           <link
             rel="stylesheet"
@@ -36,10 +40,14 @@ class MyDocument extends Document {
           />
           <style>{`
             body {
-              font-family: 游ゴシック体, Yu Gothic, YuGothic, ヒラギノ角ゴシック Pro, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳＰゴシック, MS PGothic, sans-serif;
+              font-family: source-han-serif-japanese,yu-mincho-pr6n,游明朝体,YuMincho,Yu Mincho,ヒラギノ明朝 Pro W3,Hiragino Mincho Pro,ＭＳ Ｐ明朝,MS PMincho,serif;
               margin: 0;
               background-color: white;
               animation:fadeIn 2s;
+            }
+            a {
+              color: white;
+              text-decoration: none;
             }
             @keyframes fadeIn {
               0% { 

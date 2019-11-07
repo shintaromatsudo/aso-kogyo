@@ -1,11 +1,13 @@
-import ScrollInLefts from './ScrollInLefts'
+import ScrollInLefts from './ScrollInLeftsY'
 
 const Yokohama = () => (
-  <ScrollInLefts
-    img1="../static/img/yokohama/P1010772.jpg"
-    img2="../static/img/yokohama/P1010780.jpg"
-    img3="../static/img/yokohama/P1010783.jpg"
-  />
+  <div>
+    <ScrollInLefts
+      img1="../static/yokohama/P1010772.JPG"
+      img2="../static/yokohama/P1010780.JPG"
+      href="/yokohama"
+    />
+  </div>
 )
 
 export default Yokohama

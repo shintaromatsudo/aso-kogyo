@@ -1,21 +1,49 @@
-import Link from './Link'
+import FooterLink from './FooterLink'
 
 const Footer = () => (
   <div className="footer">
     <div className="flex">
-      <Link href={'/company'} name={'会社概要'} />
-      <Link href={'/factory'} name={'工   場'} />
-      <Link href={'/product'} name={'製   品'} />
-      <Link href={'/technology'} name={'技   術'} />
-      <Link href={'/equipment'} name={'設   備'} />
-      <Link href={'/access'} name={'アクセス'} />
-      <Link href={'/contact'} name={'お問い合わせ'} />
+      <FooterLink href={'/company'} name={'会社概要'} />
+      <FooterLink href={'/yokohama'} name={'横浜工場'} />
+      <FooterLink href={'/tatebayashi'} name={'館林工場'} />
+      <FooterLink href={'/iizuka'} name={'飯塚工場'} />
+      <FooterLink href={'/contact'} name={'お問い合わせ'} />
+    </div>
+    <div className="mini">
+      <img src="../static/top_logo.png" />
     </div>
     <div className="copy_right">
       <p>Copyright© 2019 阿蘇工業株式会社 All Rights Reserved.</p>
     </div>
     <style jsx>{`
-      p {
+      @media screen and (max-width: 649px) {
+        .flex {
+          display: none;
+        }
+        .mini {
+          width: 180px;
+          height: 50px;
+          margin: auto;
+        }
+        .mini img {
+          padding-top: 20px;
+        }
+      }
+      @media screen and (min-width: 650px) {
+        .mini {
+          display: none;
+        }
+        .flex {
+          width: 80%;
+          margin: auto;
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+      .mini img {
+        width: 180px;
+      }
+      .copy_right {
         font-size: 10px;
         color: gray;
         text-align: center;
@@ -23,13 +51,7 @@ const Footer = () => (
       .footer {
         position: relative;
         height: 100px;
-        background-color: #a0d8ef;
-      }
-      .flex {
-        width: 80%;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
+        background-color: white;
       }
       .copy_right {
         width: 100%;

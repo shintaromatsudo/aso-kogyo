@@ -15,13 +15,10 @@ class ScrollInLefts extends React.Component {
       document.documentElement.scrollTop,
       document.body.scrollTop
     )
-    const scrollAnimationElm = document.querySelectorAll('.scrollIn')
+    const scrollAnimationElm = document.querySelectorAll('.scrollInL')
     for (var i = 0; i < scrollAnimationElm.length; i++) {
-      var triggerMargin = 500
-      if (
-        ScrollY >
-        scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin
-      ) {
+      var triggerMargin = 1700
+      if (ScrollY > triggerMargin) {
         scrollAnimationElm[i].classList.add('show')
       }
     }
@@ -30,28 +27,40 @@ class ScrollInLefts extends React.Component {
   render() {
     return (
       <div className="scrollInLefts flex">
-        <div className="scrollIn delay2">
-          <Item src={this.props.img1} />
+        <div className="scrollInL delay2">
+          <Item src={this.props.img1} href={this.props.href} />
         </div>
-        <div className="scrollIn delay1">
-          <Item src={this.props.img2} />
+        <div className="scrollInL delay1">
+          <Item src={this.props.img2} href={this.props.href} />
         </div>
-        <div className="scrollIn">
-          <Item src={this.props.img3} />
-        </div>
+        {/* <div className="scrollInL">
+          <Item src={this.props.img3} href={this.props.href} />
+        </div> */}
         <style jsx>{`
           @media screen and (max-width: 649px) {
             .scrollInLefts {
               height: 640px;
+              margin-top: 90px;
+            }
+            .delay1 {
+              transition-delay: 0.2s;
+            }
+            .delay2 {
             }
           }
           @media screen and (min-width: 650px) {
             .scrollInLefts {
               height: 300px;
+              margin: auto;
             }
             .flex {
               display: flex;
               justify-content: space-around;
+            }
+            .delay1 {
+            }
+            .delay2 {
+              transition-delay: 0.2s;
             }
           }
           .scrollInLefts {
@@ -60,22 +69,15 @@ class ScrollInLefts extends React.Component {
             right: 0;
             bottom: 0;
             left: 0;
-            margin: auto;
             width: 100vw;
-            background-color: gray;
+            background-color: #1059d3;
           }
 
-          .scrollIn {
+          .scrollInL {
             position: relative;
             left: -500px;
             opacity: 0;
             transition: all 1s ease;
-          }
-          .delay1 {
-            transition-delay: 0.2s;
-          }
-          .delay2 {
-            transition-delay: 0.4s;
           }
           .show {
             opacity: 1;

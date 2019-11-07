@@ -15,9 +15,9 @@ class ScrollInLefts extends React.Component {
       document.documentElement.scrollTop,
       document.body.scrollTop
     )
-    const scrollAnimationElm = document.querySelectorAll('.scrollIn')
+    const scrollAnimationElm = document.querySelectorAll('.scrollInR')
     for (var i = 0; i < scrollAnimationElm.length; i++) {
-      var triggerMargin = 500
+      var triggerMargin = 700
       if (
         ScrollY >
         scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin
@@ -30,24 +30,26 @@ class ScrollInLefts extends React.Component {
   render() {
     return (
       <div className="scrollInRights flex">
-        <div className="scrollIn">
-          <Item src={this.props.img1} />
+        <div className="scrollInR">
+          <Item src={this.props.img1} href={this.props.href} />
         </div>
-        <div className="scrollIn delay1">
-          <Item src={this.props.img2} />
+        <div className="scrollInR delay1">
+          <Item src={this.props.img2} href={this.props.href} />
         </div>
-        <div className="scrollIn d-none delay2">
-          <Item src={this.props.img3} />
-        </div>
+        {/* <div className="scrollInR d-none delay2">
+          <Item src={this.props.img3} href={this.props.href} />
+        </div> */}
         <style jsx>{`
           @media screen and (max-width: 649px) {
             .scrollInRights {
               height: 640px;
+              margin-top: 90px;
             }
           }
           @media screen and (min-width: 650px) {
             .scrollInRights {
               height: 300px;
+              margin: auto;
             }
             .flex {
               display: flex;
@@ -60,13 +62,11 @@ class ScrollInLefts extends React.Component {
             right: 0;
             bottom: 0;
             left: 0;
-            margin: auto;
             width: 100vw;
-            background-color: #a0d8ef;
-            overflow: hidden;
+            background-color: white;
           }
 
-          .scrollIn {
+          .scrollInR {
             position: relative;
             right: -500px;
             opacity: 0;

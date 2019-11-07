@@ -20,20 +20,14 @@ const BurgerMenu = () => {
         <a id="company" className="menu-item" href="/company">
           会社概要
         </a>
-        <a id="factory" className="menu-item" href="/factory">
-          工場
+        <a id="yokohama" className="menu-item" href="/yokohama">
+          横浜工場
         </a>
-        <a id="product" className="menu-item" href="/product">
-          製品
+        <a id="tatebayashi" className="menu-item" href="/tatebayashi">
+          館林工場
         </a>
-        <a id="technology" className="menu-item" href="/technology">
-          技術
-        </a>
-        <a id="equipment" className="menu-item" href="/equipment">
-          設備
-        </a>
-        <a id="access" className="menu-item" href="/access">
-          アクセス
+        <a id="iizuka" className="menu-item" href="/iizuka">
+          飯塚工場
         </a>
         <a id="contact" className="menu-item" href="/contact">
           お問い合わせ

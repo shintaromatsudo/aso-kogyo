@@ -4,13 +4,9 @@ import HeaderLinkOpen from './HeaderLinkOpen'
 const HeaderLinks = () => (
   <div className="headerLinks">
     <HeaderLink href={'/company'} name={'会社概要'} />
-    <HeaderLinkOpen id={'open'} href={'/yokohama'} link_name={'横  浜'}>
-      <HeaderLink href={'/factory'} name={'工   場'} />
-    </HeaderLinkOpen>
-    <HeaderLink href={'/product'} name={'製   品'} />
-    <HeaderLink href={'/technology'} name={'技   術'} />
-    <HeaderLink href={'/equipment'} name={'設   備'} />
-    <HeaderLink href={'/access'} name={'アクセス'} />
+    <HeaderLink href={'/yokohama'} name={'横浜工場'} />
+    <HeaderLink href={'/tatebayashi'} name={'館林工場'} />
+    <HeaderLink href={'/iizuka'} name={'飯塚工場'} />
     <HeaderLink href={'/contact'} name={'お問い合わせ'} />
     <style jsx>{`
       .headerLinks {

@@ -1,9 +1,9 @@
 const TitleItem = props => (
   <div id="titleItem">
-    <h3>{props.title}</h3>
+    <h2>{props.title}</h2>
     <style jsx>{`
       #titleItem {
-        width: 100px;
+        width: 130px;
         text-align: center;
         background-color: blue;
         color: white;

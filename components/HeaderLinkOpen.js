@@ -27,7 +27,7 @@ const HeaderLinkOpen = props => {
           left: 0;
           width: 100%;
           height: 100px;
-          background-color: #a0d8ef;
+          background-color: #1059d3;
         }
         .open {
           display: none;

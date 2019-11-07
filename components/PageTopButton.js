@@ -37,6 +37,11 @@ class PageTopButton extends React.Component {
       <div id="scrollToTop" onClick={this.scrollToTop}>
         <i className="fas fa-angle-double-up" />
         <style jsx>{`
+          i {
+            position: absolute;
+            top: 7px;
+            left: 15px;
+          }
           #scrollToTop {
             position: fixed;
             right: 40px;
@@ -44,19 +49,20 @@ class PageTopButton extends React.Component {
             width: 50px;
             height: 50px;
             font-size: 2em;
-            color: #a0d8ef;
+            color: #1059d3;
             background-color: white;
-            border: 2px solid #a0d8ef;
+            border: 2px solid #1059d3;
             border-radius: 50%;
             text-align: center;
             cursor: pointer;
             transition: all 0.5s linear 0s;
             opacity: 0;
             visibility: hidden;
+            z-index: 100;
           }
           #scrollToTop :hover {
             color: white;
-            background-color: #a0d8ef;
+            background-color: #1059d3;
             border: 2px solid white;
           }
           .fadeIn {
